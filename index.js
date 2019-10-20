@@ -1,10 +1,8 @@
-function mapToNegativize(array) {
-    let answer = []
-    for (let i = 0; i < array.length; i++) {
-        answer.push(-array[i]);
+function mapToNegativize(sourceArray){
+  let arrays =[]
+  arrays = sourceArray.map(x=>x*-1);
 
-    }
-    return answer;
+  return arrays
 }
 
 function mapToNoChange(array) {
@@ -52,5 +50,11 @@ function reduceToAnyTrue(array) {
     for (let i = 0; i < array.length; i++) {
         answer = answer || !!array[i]
     }
-    return answer;
+    return answer;}
+function mapToNegativize(array){
+  let answer = [];
+  for(i=0;i<=answer.length;i++){
+    
+  }
+
 }
