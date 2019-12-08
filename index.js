@@ -1,60 +1,54 @@
+let i;
 function mapToNegativize(sourceArray){
-  let arrays =[]
-  arrays = sourceArray.map(x=>x*-1);
-
-  return arrays
-}
-
-function mapToNoChange(array) {
-    return array;
-}
-
-function mapToDouble(array) {
-    let answer = [];
-    for (let i = 0; i < array.length; i++) {
-        answer.push(array[i] * 2);
-    }
-    return answer;
-
-}
-
-function mapToSquare(array) {
-    let answer = [];
-    for (let i = 0; i < array.length; i++) {
-        answer.push(array[i] * array[i])
-
-    }
-    return answer;
-}
-
-function reduceToTotal(array, startpoint = 0) {
-    let answer = startpoint;
-    for (let i = 0; i < array.length; i++) {
-        answer += array[i];
-
-
-    }
-    return answer;
-}
-
-function reduceToAllTrue(array) {
-    let answer = true;
-    for (let i = 0; i < array.length; i++) {
-        answer = answer && !!array[i]
-    }
-    return answer;
-}
-
-function reduceToAnyTrue(array) {
-    let answer = false;
-    for (let i = 0; i < array.length; i++) {
-        answer = answer || !!array[i]
-    }
-    return answer;}
-function mapToNegativize(array){
-  let answer = [];
-  for(i=0;i<=answer.length;i++){
-    
+  let newArr= [];
+  for(i = 0;i < sourceArray.length; i++){
+    newArr.push(sourceArray[i] * -1);
   }
-
+  return newArr;
+}
+function mapToNoChange(sourceArray){
+    let newArr= [];
+  for(i = 0;i < sourceArray.length; i++){
+    newArr.push(sourceArray[i]);
+  }
+  return newArr;
+}
+function mapToDouble(sourceArray){
+    let newArr= [];
+  for(i = 0;i < sourceArray.length; i++){
+    newArr.push(sourceArray[i] * 2);
+  }
+  return newArr;
+}
+function mapToSquare(sourceArray) {
+      let newArr= [];
+  for(i = 0;i < sourceArray.length; i++){
+    newArr.push(sourceArray[i] ** 2);
+  }
+  return newArr;
+}
+function reduceToTotal(sourceArray, startingPoint = 0){
+  let total= startingPoint;
+  for(i = 0;i < sourceArray.length; i++){
+   total  = total + sourceArray[i];
+}
+return total;
+}
+function reduceToAllTrue(sourceArray) {
+  for(i = 0;i < sourceArray.length; i++){
+    if (!sourceArray[i])
+    {
+      return false;
+    }
+}
+return true;
+}
+function reduceToAnyTrue(sourceArray) {
+  for(i = 0;i < sourceArray.length; i++){
+    if (sourceArray[i])
+    {
+      return true;
+    }
+}
+return false;
 }
